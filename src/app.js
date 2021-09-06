@@ -1,6 +1,120 @@
 // aos
 AOS.init();
 // 
+
+//electricity-chart-2//
+const elChartTwoURL = 'assets/electricity_trade.csv';
+const elChartPromise = papaPromise(elChartTwoURL)
+let elChartTwoElem = document.getElementById('electricity-chart-two');
+let elChartTwo = echarts.init(elChartTwoElem)
+let elChartTwoOptions
+let elChartTwoData = [[], [], [], []]
+elChartPromise.then((res) =>{
+    res.data.forEach((row)=>{
+        elChartTwoData[0].push(row.year)
+        elChartTwoData[1].push(row.total_traded_volume)
+        elChartTwoData[2].push(row.czs)
+        elChartTwoData[3].push(row.dms)
+
+    })
+    elChartTwoOptions ={
+        legend: {
+            y: 'top',
+            margin: 5,
+            itemStyle:{
+                opacity: 0
+            }
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {title: ''},
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                
+                type: 'category',
+                boundaryGap: false,
+                data: elChartTwoData[0]
+            }
+        ],
+        
+        yAxis: [
+            {
+                type: 'value',
+                axisLabel: {
+                    formatter: "{value} %"
+                    },
+            }
+        ],
+        series: [
+            {
+                name: 'Total traded volume',
+                type: 'line',
+                smooth: false,
+                lineStyle: {
+                    width: 1.5,
+                    color: '#81F39C'
+                },
+                showSymbol: false,
+                emphasis: {
+                    focus: 'series'
+                },animationDelay: function (idx) {
+                    return idx * 10;
+                },
+                
+                data: elChartTwoData[1]
+            },
+            {
+                name: 'Cross-zonal trading',
+                type: 'line',
+                smooth: false,
+                lineStyle: {
+                    width: 1.5,
+                    color: '#81F39C'
+                },
+                showSymbol: false,
+                emphasis: {
+                    focus: 'series'
+                },animationDelay: function (idx) {
+                    return idx * 20;
+                },
+                
+                data: elChartTwoData[2]
+            },
+            {
+                name: 'Domestic trading',
+                type: 'line',
+                smooth: false,
+                lineStyle: {
+                    width: 1.5,
+                    color: '#81F39C'
+                },
+                showSymbol: false,
+                emphasis: {
+                    focus: 'series'
+                },animationDelay: function (idx) {
+                    return idx * 30;
+                },
+                
+                data: elChartTwoData[3]
+            },
+        ]
+    }
+    elChartTwoOptions && elChartTwo.setOption(elChartTwoOptions);
+    window.onresize = function() {
+        elChartTwo.resize();
+    }
+})
 //renewables-chart//
 const renURL = "assets/covid_renewable.csv";
 const renCovidPromise = papaPromise(renURL)
@@ -689,13 +803,23 @@ var labelRight = {
     position: 'right'
 };
 option = {
-    // title: {
-    //     text: 'Level of efficiency in the use of interconnectors in Europe in the different timeframes (% use of available commercial capacity in the ‘right economic direction’) – 2019',
-    // },
+    title: {
+        text: "Efficient use of interconnectors in the different timeframes in 2019 (%)",
+        textStyle:{
+            fontFamily: 'Inter',
+            fontWeight: '300'
+        }
+
+    },
     tooltip: {
         trigger: 'axis',
         axisPointer: {            // 坐标轴指示器，坐标轴触发有效
             type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {title: ''},
         }
     },
     xAxis: {
@@ -1021,14 +1145,14 @@ function elementInViewport2(el) {
 
 
   const svg =    d3.select("#bubbles")
-  .append("div")
-  .classed("svg-container", true) //container class to make it responsive
-  .append("svg")
-  //responsive SVG needs these 2 attributes and no width and height attr
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 600 400")
-  //class to make it responsive
-  .classed("svg-content-responsive", true); 
+                .append("div")
+                .classed("svg-container", true) //container class to make it responsive
+                .append("svg")
+                //responsive SVG needs these 2 attributes and no width and height attr
+                .attr("preserveAspectRatio", "xMinYMin meet")
+                .attr("viewBox", "0 0 600 400")
+                //class to make it responsive
+                .classed("svg-content-responsive", true); 
 
 // Map and projection
 const projection = d3.geoMercator()
@@ -1117,3 +1241,6 @@ d3.json("assets/EU.geojson").then( function(data){
         .on("mouseleave", mouseleave)
 })
   
+
+
+

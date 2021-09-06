@@ -68,7 +68,11 @@ body{
 }
 #electricity-chart-one{
     min-width: 300px;
-    min-height: 180px;
+    min-height: 250px;
+}
+#electricity-chart-two{
+    min-width: 800px;
+    min-height: 400px;
 }
 #renewable-chart{
     min-width: 300px;
@@ -167,16 +171,33 @@ body{
       max-height: 50vh;
       padding-top: 5vh;
   }
+  .electricity-ill >svg{
+    max-height: 40vh;
+  }
 
 .last-head{
     padding-top: 0;
     margin-top: 0;
 }
 .right-img{
+    max-width: 100%;
+    max-height: 100%;
     background: url('https://images.unsplash.com/photo-1452179535021-368bb0edc3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2048&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 
+}
+.gas-img{
+    max-width: 100%;
+    max-height: 100%;
+    background: url('https://images.pexels.com/photos/532006/pexels-photo-532006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.secondary::before{
+    content: '↓';
+    margin-right: 10px;
 }
 
 .svg-container {
