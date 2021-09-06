@@ -167,7 +167,11 @@ gasmarkupPromise.then(function (results) {
     gasMarkupOptions = {
         title: {
             text: 'Gas',
-            subtext: '(euros/MWh)'
+            subtext: '(euros/MWh)',
+            textStyle:{
+                fontFamily: 'Inter',
+                fontWeight: '300'
+            }
         },
         legend: {
             y: 'top',
@@ -291,7 +295,11 @@ markupPromise.then(function (results) {
         color: ['gray', 'rgba(12, 177, 114)', 'orange', 'rgba(3, 4, 124)', 'lightblue'],
         title: {
             text: 'Electricity',
-            subtext: '(euros/MWh)'
+            subtext: '(euros/MWh)',
+            textStyle:{
+                fontFamily: 'Inter',
+                fontWeight: '300'
+            }
         },
         legend: {
             y: 'top',
@@ -747,9 +755,13 @@ var retailChart = echarts.init(retailChartDom);
 var retailOptions;
 
 retailOptions = {
-    // title: {
-    //     text: 'Level of efficiency in the use of interconnectors in Europe in the different timeframes (% use of available commercial capacity in the ‘right economic direction’) – 2019',
-    // },
+    title: {
+        text: 'Electricity price breakdown, %',
+        textStyle:{
+            fontFamily: 'Inter',
+            fontWeight: '300'
+        }
+    },
     tooltip: {
         trigger: 'axis',
         axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -845,7 +857,99 @@ window.onresize = function() {
     retailChart.resize();
   };
   //
+//gas-retail
 
+let gsretailChartDom = document.getElementById('retail-chart-gs');
+var gsretailChart = echarts.init(gsretailChartDom);
+var gsretailOptions;
+
+gsretailOptions = {
+    title: {
+        text: 'Gas price breakdown, %',
+        textStyle:{
+            fontFamily: 'Inter',
+            fontWeight: '300'
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    yAxis: {
+        type: 'value',
+        position: 'top',
+        axisLabel: {
+        formatter: "{value} %"
+        },
+        splitLine: {
+            lineStyle: {
+                type: 'dashed'
+            }
+        }
+    },
+    grid: {
+        left: 140,
+        containLabel: false
+    },
+    xAxis: {
+        type: 'category',
+        data: ['2012', '2019']
+    },
+    series: [
+        {
+            name: 'Energy',
+            type: 'bar',
+            stack: 'total',
+            itemStyle:{
+                color: '#FEEA70'
+            },
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [56, 47]
+        },
+        {
+            name: 'Networks',
+            type: 'bar',
+            stack: 'total',
+            itemStyle:{
+                color: '#C0C0C0'
+            },
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [23, 31]
+        },
+        {
+            name: 'Taxes',
+            type: 'bar',
+            stack: 'total',
+            itemStyle:{
+                color: '#BC9BFD'
+            },
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [21,22]
+        },
+    ]
+};
+
+gsretailOptions && gsretailChart.setOption(gsretailOptions);
+window.onresize = function() {
+    gsretailChart.resize();
+  };
 //choropleth
 // google.charts.load('current', {
 //     'packages':['geochart'],
@@ -908,7 +1012,7 @@ function elementInViewport2(el) {
     duration: 1500,
     delay: function(el, i) { return i * 10 },
     direction: 'alternate',
-    loop: false
+    loop: true
   });
 
 
