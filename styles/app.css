@@ -1,0 +1,208 @@
+html, body{
+    font-family: 'Inter'!important;
+}
+body{
+    position: relative;
+}
+#spy{
+    position: fixed;
+}
+.hero-left{
+    margin-top: 5vh;
+    /* border-top: 1px solid black; */
+    padding: 10px 40px 40px 40px;
+}
+.suptitle{
+    margin: 10px 0 10px 0 ;
+}
+.hero-text{
+    font-weight: 300;
+    font-size: 3.1rem;
+}
+.hero-description{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.landing-left-panel{
+    background-color: #FEEA70;
+    bottom: 0;
+}
+.sm-icon{
+    height: 54px;
+    width: 54px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.sm-icon:nth-child(2){
+    margin-left: 10px;
+}
+.landing-right-panel{
+    background: url('https://images.unsplash.com/photo-1539186607619-df476afe6ff1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.land, .landing{
+    min-height: 100vh;
+}
+.landing{
+    min-height: 100vh;
+    max-width: 1920px;
+}
+
+.sector{
+    margin-top: 10vh;
+    font-size: 14px;
+}
+.covid-upper{
+    background-color: #E8E8E8;
+    padding: 1.2rem;
+}
+.sector-head{
+    font-weight: 300;
+    font-size: 2.7rem;
+    padding-top: 30px;
+}
+.sector-child{
+    border-top: 1px solid black;
+}
+#electricity-chart-one{
+    min-width: 300px;
+    min-height: 180px;
+}
+#renewable-chart{
+    min-width: 300px;
+    min-height: 400px;
+}
+#retail-chart{
+    min-width: 300px;
+    min-height: 100%;
+}
+.sector-grid-title{
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.answer{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: 30%;
+    background-color: #FEEA70;
+    font-size: 0.8rem;
+    min-width: 40%;
+    max-width: 60%;
+    z-index: 100;
+    padding: 30px;
+}
+.answer::before{
+    min-width: 10%;
+    max-width: 60%;
+    position: absolute;
+    top:0;
+    margin-top: -10px;
+    left: 0;
+    content: 'click anywhere on the box to close';
+    padding: 10px;
+    color: white;
+    font-weight: 300;
+    background-color: #004FEE;
+}
+.gas-ill, .electricity-ill{
+    padding: 40px;
+}
+.open-toggle{
+    display: inline;
+    font-size: 1.3rem;
+}
+#gas-chart{
+    min-height: 500px;
+}
+#el-markup-chart{
+    min-height: 350px;
+}
+#gas-markup-chart{
+    min-height: 350px;
+
+}
+.hub-title{
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+.hub > ul > li{
+    font-size: 0.9rem;
+}
+.hub-a{
+    border-left: 1px solid blue;
+}
+.hub{
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);}
+.hub:hover{
+    border-left: 4px solid blue;
+}
+.sector-sub-head{
+    font-weight: 300;
+    font-size: 2.2rem;
+    padding-top: 0;
+}
+.role:before {
+    position: absolute;
+    content: '';
+    border-top: 1px solid black;
+    width: 95%;
+    transform: translateX(-50%);
+    top: -5px;
+    left: 50%;
+  }
+
+  .chart-disclaimer{
+      font-size: 12px;
+  }
+  .renewable-ill > svg{
+      max-height: 50vh;
+      padding-top: 5vh;
+  }
+
+.last-head{
+    padding-top: 0;
+    margin-top: 0;
+}
+.right-img{
+    margin-top: 5vh;
+    min-height: 40vh;
+    background: url('https://images.unsplash.com/photo-1592022359155-a570c8cc2dbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+    .hero-text {
+        font-size: 2rem;
+    }
+    .hero-description{
+        font-size: 0.8rem;
+    }
+    .sector-head{
+        font-size:2.5rem
+    }.answer{
+        max-width: 100%;
+    }
+  }

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ACER - Monitoring the Internal Electricity and Natural Gas Markets in 2019</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" type="text/css" href="styles/app.css" />
+  <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <script src="https://d3js.org/d3.v6.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/echarts.min.js"
+    integrity="sha512-ppWbHq6q2f7HAwS481w6qikuC0XEeBnmkRg6KWnWg3zSIbJwWWBgsCDMAxzSB7SVqXzWwSYQ2s8TSJKjnaikMg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body data-spy="scroll" data-target="#spy">
+  <!-- <div class="col-lg-1" id="spy">
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item"><a class="nav-link active" href="#scroll1">First Section</a></li>
+      <li class="nav-item"><a class="nav-link" href="#scroll2">Second Section</a></li>
+      <li class="nav-item"><a class="nav-link" href="#scroll3">Third Section</a></li>
+      <li class="nav-item"><a class="nav-link" href="#scroll4">Fourth Section</a></li>
+    </ul>
+  </div> -->
+
+  <section>
+    <div class="container-fluid landing landing-right-panel">
+      <div class="container">
+        <div class="row land align-items-end">
+          <div class="col-lg-9 landing-left-panel">
+            <div class="hero-left">
+              <h6 class="suptitle">Report</h6>
+              <h1 class="hero-text">
+                Annual Report on the Results of Monitoring the Internal
+                Electricity and Natural Gas Markets in 2019.
+              </h1>
+              <p class="hero-description">
+                Whilst gas wholesale markets for the most part function
+                efficiently, challenges remain for both electricity and retail
+                energy markets across Europe.
+              </p>
+              <div class="btn btn-primary btn-lg rounded-circle sm-icon" style="background-color: #004fee" href="#!"
+                role="button">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div class="btn btn-primary btn-lg rounded-circle sm-icon" style="background-color: #004fee" href="#!"
+                role="button">
+                <i class="bi bi-twitter"></i>
+              </div>
+              <div class="btn btn-primary btn-lg rounded-circle sm-icon" style="background-color: #004fee" href="#!"
+                role="button">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+
+
+      <div class="row sector align-items-center">
+        <div class="col-lg-6" data-aos="fade-up">
+          <p>
+            Since 2012, the European Union Agency for the Cooperation of
+            Energy Regulators (ACER) has presented the results of its
+            monitoring activities in the annual Market Monitoring Reports
+            (MMRs). These reports are produced and published in cooperation
+            with the Council of European Energy Regulators (CEER).
+            <br /><br />
+            The 2019 MMR consists of three volumes, respectively on the
+            Electricity Wholesale Market, the Gas Wholesale Market and Energy
+            Retail and Consumer Protection. The MMR covers EU Member States
+            and, for some topics, Norway, Switzerland and the Energy Community
+            (EnC) Contracting Parties (CPs). This snapshot provides an
+            overview of the highlights of the MMR covering 2019, with some
+            additions looking into effects of the COVID-19 pandemic during the
+            first part of 2020.
+          </p>
+        </div>
+        <div class="col-lg-6 covid-upper">
+          <p>
+            The COVID-19 pandemic has, among its many impacts on society,
+            resulted in lower levels of economic output with adverse effects
+            on the income of many citizens of the EU. In response, national
+            energy regulatory authorities are imposing a range of additional
+            measures to protect energy consumers from disconnection of their
+            energy supply.
+            <br /><br />
+            The pandemic has also resulted in an unprecedented negative demand
+            shock to electricity and gas markets in the EU. However, during
+            this period, the EU internal markets for electricity and gas have
+            continued to function and there have been no disruptions to
+            cross-border energy flows or trade. <br /><br />
+            In response to the economic shock caused by COVID-19, achieving a
+            sustainable and resilient recovery will be a priority. In this
+            context, a cost-efficient integration of the internal energy
+            market supported by an exhaustive market monitoring becomes more
+            relevant than ever. To that end, the policy targets set for the EU
+            within the Clean Energy for All Europeans Package adopted in 2019
+            remain key. These include a fully integrated internal energy
+            market, security of supply, improved energy efficiency,
+            innovation, and the development of new and renewable forms of
+            energy to better align and integrate climate change mitigation
+            goals into energy markets.
+          </p>
+        </div>
+      </div>
+      <div class="row sector sector-child with-ill mb-5" id="scroll1">
+        <div class="col-lg-6">
+          <h1 class="sector-head">Impact of the Covid-19 pandemic</h1>
+          <p>
+            The COVID-19 pandemic has been having a <b>significant impact on EU
+            gas and electricity market demands</b>, showing a <b>7%</b> and <b>8%</b> drop
+            respectively. Nevertheless, <b>market integration continued at pace</b>,
+            with continuous volumes traded in the first half of 2020
+            increasing by more than 25% compared to the same period of 2019.
+            The same goes for <b>gas hub trading activity, which rose by more
+            than a fifth up to June 2020</b> compared to the same period last
+            year.
+          </p>
+        </div>
+
+        <div class="col-lg-6 renewable-ill text-center">
+          <svg id="renewable-ill" data-name="renewable-ill" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 155.20455 224.07229">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #000;
+                  stroke-miterlimit: 1;
+                }
+              </style>
+            </defs>
+            <line class="cls-1" x1="77.70455" y1="74.07229" x2="77.70455" y2="224.07229" />
+            <line class="cls-1" x1="155.20455" y1="73.95866" y2="73.95866" />
+            <line class="cls-1" x1="140.38383" y1="28.34518" x2="14.82072" y2="119.57213" />
+            <line class="cls-1" x1="101.58269" y1="0.15451" x2="53.62185" y2="147.7628" />
+            <line class="cls-1" x1="53.62185" y1="0.15451" x2="101.58269" y2="147.7628" />
+            <line class="cls-1" x1="14.82072" y1="28.34518" x2="140.38383" y2="119.57213" />
+          </svg>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <div id="renewable-chart"></div>
+          <p class="chart-disclaimer text-center">
+            Data is calculated on approximation based on available charts by
+            the Eurostat and ENTSO-E Transparency Platform. Displayed values
+            may vary significantly from the actual figures.
+          </p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <h5 class="sector-grid-title">
+            The Covid-19 pandemic may have
+            <b> accelerated the transition to renewable energy</b>. EU
+            generation mix changed remarkably, registering the
+            <b> highest share of renewable generation ever</b>, of
+            approximately 40% until June.
+          </h5>
+        </div>
+      </div>
+
+
+      <div class="row sector sector-child" id="scroll2">
+        <div class="col-lg-7">
+          <h1 class="sector-head">
+            Electricity wholesale markets
+
+            <div class="open-toggle">
+              <sup><i class="bi bi-question-circle"></i></sup>
+              <div class="answer">
+                The electricity generated at a power plant is frequently
+                bought and sold a number of times in the wholesale market
+                before reaching the final consumer.
+                <br /><br />
+                These sales generally take place in large quantities of
+                electricity and involve energy producers, retailers,
+                investment banks, and large energy users. Natural gas is
+                traded in a similar manner. Currently, several hundred
+                companies are involved in wholesale electricity and gas
+                trading in Europe and more than 10 000 transactions take place
+                every day.
+                <br /><br />
+                Wholesale prices are highly sensitive to available production
+                and transmission capabilities because energy must be produced
+                when needed and cannot be stored on an industrial scale.
+                Prices may also be influenced by false information on the
+                availability of these capabilities, or by reducing the
+                production.
+                <br /><br />
+                Since plenty of energy is also traded across borders, it has
+                traditionally been difficult to detect this kind of price
+                manipulation as national regulators have not had access to
+                cross-border data.
+
+                <br /><br />
+                <strong>ACER's role</strong>
+                <br /><br />
+
+                ACER is responsible for the independent monitoring of all
+                wholesale energy trades. If market abuse is suspected, ACER
+                will request that national regulators investigate. It will
+                also coordinate cross-border investigations.
+              </div>
+            </div>
+          </h1>
+          <p>
+            Electricity wholesale markets continue to integrate in the EU as
+            price convergence increased and the available cross-border
+            capacity was used more efficiently in 2019. However, some
+            significant challenges remain: the available cross-border capacity
+            is insufficient and a more coordinated approach to ensure security
+            of supply is needed.
+          </p>
+        </div>
+        <div class="col-lg-5 electricity-ill">
+          <svg id="electricity-ill-one" data-name="electricity-ill-one" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 425.94681 413.66078">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #000;
+                  stroke-miterlimit: 10;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g>
+              <polyline class="cls-1" points="0.947 413.333 140.379 3.081 282.493 413.333" />
+              <polyline class="cls-1" points="143.06 413.333 282.493 3.081 424.606 413.333" />
+              <line class="cls-1" x1="2.2875" y1="17.82873" x2="423.26542" y2="17.82873" />
+              <line class="cls-1" x1="3.6282" y1="76.81926" x2="424.60612" y2="76.81926" />
+              <line class="cls-1" x1="4.96889" y1="135.8098" x2="425.94681" y2="135.8098" />
+              <line class="cls-1" x1="46.53041" y1="275.24198" x2="376.34113" y2="275.24198" />
+              <line class="cls-1" x1="25.0793" y1="339.59529" x2="397.79224" y2="339.59529" />
+            </g>
+          </svg>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <p>
+              The efforts of Member States towards market integration in
+              recent years continued to bear fruit in 2019. For example, due
+              to market coupling, the integration of day-ahead markets, which
+              are the main reference for trading electricity close to real
+              time, progressed significantly over the last decade.
+              Consequently, the level of efficiency in the use of cross-zonal
+              capacity (88%) in day-ahead markets was the highest across all
+              short-term timeframes in 2019.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <div id="electricity-chart-one"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8"></div>
+
+          <div class="col-lg-4" data-aos="fade-up">
+            <h5 class="sector-grid-title">
+              Electricity systems face unprecedented technical and political
+              changes that challenge an efficient guarantee of security of
+              supply. The Clean Energy Package calls for adequacy assessments
+              to underpin the use of Capacity Mechanisms (CMs).
+            </h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <p>
+              The Clean Energy Package aims at addressing the system adequacy
+              needs in a coordinated manner with a view to maintaining the
+              desired security of supply levels at the lowest possible cost
+              for end-consumers. In particular, the Clean Energy Package
+              requires a thorough assessment of the adequacy needs in light of
+              the resources available within and beyond one’s jurisdiction,
+              meaning by having access to resources in neighbouring Member
+              States, the overall cost of ensuring sufficient resources will
+              be lower. ACER plays a crucial role in this respect, as it will
+              approve the methodologies underlying this assessment and it will
+              monitor their proper implementation. The approval process of the
+              methodologies is currently ongoing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row sector sector-child" id="scroll3">
+        <div class="col-lg-6">
+          <h1 class="sector-head">
+            Gas wholesale markets
+        </h1>
+        <p>
+          Gas markets in West Europe and parts of Central Europe, which
+          account for three-quarters of EU gas consumption, have become
+          strongly integrated since the process of establishing an EU
+          internal gas market started. The integration process is also
+          gradually advancing in other parts of the EU but regional
+          differences persist.
+        </p>
+      </div>
+      <div class="col-lg-5 gas-ill">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455.25862 210.5">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke: #000;
+                stroke-miterlimit: 10;
+                stroke-width: 2px;
+              }
+            </style>
+          </defs>
+          <g>
+            <circle class="cls-1" cx="407.63792" cy="45.58627" r="18.74787" />
+            <circle class="cls-1" cx="82.6749" cy="45.58627" r="18.74787" />
+            <path class="cls-1"
+              d="M388.89007,45.58628A18.74787,18.74787,0,0,1,407.638,26.8384H82.67491a18.74786,18.74786,0,0,1,0,37.49572H407.638A18.74784,18.74784,0,0,1,388.89007,45.58628Z" />
+          </g>
+          <g>
+            <circle class="cls-1" cx="369.83644" cy="83.39309" r="18.74787" />
+            <circle class="cls-1" cx="44.87342" cy="83.39309" r="18.74787" />
+            <path class="cls-1"
+              d="M351.08859,83.39311a18.74787,18.74787,0,0,1,18.74788-18.74789H44.87344a18.74787,18.74787,0,0,1,0,37.49573h324.963A18.74784,18.74784,0,0,1,351.08859,83.39311Z" />
+          </g>
+          <g>
+            <circle class="cls-1" cx="407.66284" cy="120.81996" r="18.74787" />
+            <circle class="cls-1" cx="82.69981" cy="120.81996" r="18.74787" />
+            <path class="cls-1"
+              d="M388.915,120.82a18.74788,18.74788,0,0,1,18.74788-18.74788H82.69983a18.74786,18.74786,0,0,1,0,37.49572h324.963A18.74784,18.74784,0,0,1,388.915,120.82Z" />
+          </g>
+          <g>
+            <circle class="cls-1" cx="369.86136" cy="158.62679" r="18.74787" />
+            <circle class="cls-1" cx="44.89833" cy="158.62679" r="18.74787" />
+            <path class="cls-1"
+              d="M351.1135,158.6268a18.74788,18.74788,0,0,1,18.74788-18.74788H44.89835a18.74786,18.74786,0,0,1,0,37.49572h324.963A18.74784,18.74784,0,0,1,351.1135,158.6268Z" />
+          </g>
+        </svg>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <h3>
+            The gas network codes bring more and more positive effects.
+          </h3>
+          <div class="open-toggle">
+            <sup><i class="bi bi-question-circle"></i></sup>
+            <div class="answer">
+              A fully functioning and interconnected internal energy market is crucial for maintaining security of
+              energy supply, increasing competitiveness and ensuring that all consumers can purchase energy at
+              affordable prices.
+              <br> <br>
+              Europe's cross-border gas networks operate according to rules that regulate who can use them and under
+              what conditions. To further advance interconnection and boost trade, the rules, which previously fell
+              under national legislation, have progressed into EU-wide network codes and guidelines.
+              <br /><br />
+              Each year, the Commission draws up an 'annual priority list' of areas to be included in the development of
+              network codes, with input from a public consultation. On the basis of this, as well as further input from
+              the Agency for the Cooperation of Energy Regulators (ACER) and the European Network of Transmission System
+              Operators for Gas (ENTSOG), the Commission adopts proposals for network codes.
+              <br> <br>
+              To ensure coherence between the national and the EU level, a gas cross-border committee with specialists
+              from national energy ministers reviews the proposals before the Commission adopts them, with approval from
+              the Council of the European Union and the European Parliament.
+              <br> <br>
+              In addition, the network codes are being applied, step by step, in the Energy Community, an international
+              organisation that brings together the EU and its neighbours to create an integrated pan-European energy
+              market.
+            </div>
+          </div>
+          <p>
+            Common, market-oriented rules governing access and operation of EU gas transportation systems – the gas network codes – have contributed to high levels of gas price integration between Member States, increased competition and helped boost liquidity of trading hubs over the period of the last five years.
+            <br><br>
+            To facilitate market access and competition, the Capacity Allocation Mechanism (CAM) network code enables market
+            participants to book cross-border transportation capacity more efficiently and transparently. As a result,
+            cross-border interconnectors are being used with increasing efficiency.
+            <br> <br> While most long-term capacity contracts currently in place still precede the entering into force
+            of the CAM NC, this will change in the coming years. More than half of contracted transportation capacity
+            valid at the start of 2020 had been booked before 2015, but in the coming years, expiration of legacy
+            long-term contracts will accelerate and they will almost completely disappear by 2035
+
+          </p>
+
+        </div>
+        <div class="col-lg-8">
+          <div id="gas-chart"></div>
+        </div>
+      </div>
+      <div class="row hubs">
+        <div class="col-lg-4">
+          <div class="col hub hub-a">
+            <h3 class="hub-title">Established hubs</h3>
+            <ul>
+              <li>Broad liquidity</li>
+              <li>
+                Sizeable forward markets which contribute to supply hedging
+              </li>
+              <li>
+                Price reference for other EU hubs and for long-term contracts
+                indexation
+              </li>
+            </ul>
+          </div>
+          <div class="col hub hub-b">
+            <h3 class="hub-title">Advanced hubs</h3>
+            <ul>
+              <li>High liquidity</li>
+              <li>More reliant comparatively on spot products</li>
+              <li>
+                Progress on supply hedging role but relatively lower liquidity
+                levels of longer-term products
+              </li>
+            </ul>
+          </div>
+          <div class="col hub hub-c">
+            <h3 class="hub-title">Emerging hubs</h3>
+            <ul>
+              <li>
+                Improving liquidity from a lower base taking advantage of
+                enhanced interconnectivity and regulatory interventions
+              </li>
+              <li>
+                High reliance on long-term contracts and bilateral deals
+              </li>
+            </ul>
+          </div>
+          <div class="col hub hub-d">
+            <h3 class="hub-title">Iliquid-incipient hubs</h3>
+            <ul>
+              <li>
+                Embryonic liquidity at a low level and mainly focused on spot
+              </li>
+              <li>
+                Core reliance on long-term contracts and bilateral deals
+              </li>
+              <li>
+                Diverse group with some jurisdictions having: a. organised
+                markets in early stage and b. to develop entry-exit systems
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="col-lg-8">
+        <div id="bubbles">
+      </div>
+
+      </div>
+    </div>
+
+      <div class="row sector sector-child" id="scroll4">
+        <div class="col-lg-6">
+          <h1 class="sector-head">Energy Retail and Consumer Protection</h1>
+        <!-- </div>
+        <div class="col-lg-6 mt-3"> -->
+          <p>
+            Retail energy prices continue to vary across the Member States
+            signalling that some markets are not operating at an efficient
+            level. Energy prices increased in 2019 while price intervention
+            continues in Member States. Such intervention is hampering the
+            entry of new suppliers offering wider consumer choice. Smart meter
+            rollout is key to ensuring consumers are provided clear and real
+            time information regarding their energy use. However, the rollout
+            of smart meters continues to vary across Member States limiting
+            the provision of real time information to energy consumers.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="row align-items-center mt-5 mb-5">
+        <div class="col-lg-5">
+          <h5 class="sector-subtitle">
+            Link between wholesale and retail prices
+          </h5>
+          <p class="sector-subtitle-desc">
+            The difference between wholesale energy prices and retail energy
+            prices (mark-up) widened in 2019, highlighting barriers in the
+            retail market. Strong correlation correlation between retail and
+            wholesale energy prices is observed when wholesale energy prices
+            increase, while weaker links are observed with regard to the rate
+            of reduction of retail prices following a fall in wholesale energy
+            prices.
+            <br> <br>
+            The adjacent charts illustrate the responsiveness of the energy component of retail prices to changes in wholesale prices and evaluation of mark-ups in household markets from 2008 to 2019 for electricity and from 2012 to 2019 in gas (euros/MWh)
+          </p>
+        </div>
+
+        <div class="col-lg-7">
+          <div id="el-markup-chart">
+          </div>
+          <div id="gas-markup-chart" class="mt-5"></div>
+        </div>
+
+</div>
+
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <h5 class="hub-title">Retail price dynamics for households</h5>
+          <p class="sector-subtitle-desc">
+            On average, end-user prices saw a small increase compared to 2018,
+            albeit with large price variations across the EU.
+            <br />
+            <br />
+            Household gas consumers in Sweden paid 11.8 euro cents/kWh in 2019,
+            which was almost three times the price paid by household gas
+            consumers in Romania in 2019 (3.4 euro cents/kWh). In the industrial
+            market, gas consumers in Denmark paid almost three times (6.0 euro
+            cents/kWh) the price paid by gas consumers in France (2.1 euro
+            cents/kWh).
+            <br />
+            <br />
+            Large differences in electricity prices continue for household and
+            industrial consumers across the EU, Norway and the EnC CPs, ranging
+            from 29.8 euro cents/kWh in Germany to 9.8 euro cents/kWh in
+            Bulgaria. Even greater variations were recorded in the industrial
+            market, with industrial electricity consumers in Denmark paying
+            22.2 euro cents/kWh in 2019 or more than four times more than the
+            electricity price paid by industrial consumers in Luxembourg in 2019
+            (the cheapest at a price of 4.9 euro cents/kWh).
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div id="retail-chart">
+
+          </div>
+
+        </div>
+      </div>
+</div>
+      <div class="row sector sector-child">
+        <div class="col-lg-4">
+        <h6 class="suptitle">Energy and climate are linked
+        </h6>
+        <h1 class="sector-head last-head">
+          ACER and the European Green Deal
+        </h1>
+        </div>
+        <div class="col-lg-8 right-img">
+
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-3">
+          <h1 class="sector-sub-head">ACER drives the decarbonisation of the energy sector.
+          </h1>
+        </div>
+        <div class="col-lg-3 role">
+          <p>
+            ACER is currently approving a number of regional methodologies for
+            coordinated re-dispatching and countertrading. The urgent adoption
+            and implementation of these methodologies is an absolute
+            prerequisite to meet the 70% Clean Energy Package minimum target.
+          </p>
+        </div>
+        <div class="col-lg-3 role">
+          <p>
+            ACER further recommends that regional capacity calculation
+            methodologies are amended as soon as possible in order to take
+            into account the requirements of the Clean Energy Package, with
+            particular emphasis on ensuring that the 70% capacity target is
+            met.
+          </p>
+        </div>
+        <div class="col-lg-3 role">
+          <p>
+            The Clean Energy Package requires a thorough assessment of the
+            adequacy needs in light of the resources available within and
+            beyond one’s jurisdiction, meaning by having access to resources
+            in neighbouring Member States, the overall cost of ensuring
+            sufficient resources will be lower. ACER plays a crucial role in
+            this respect, as it will approve the methodologies underlying this
+            assessment and it will monitor their proper implementation.
+          </p>
+        </div>
+        <div class="col-lg-3 role">
+          Developing, implementing and monitoring the Network Codes – the binding EU-wide rules governing the electricity and gas sector. Why? Completing a well-functioning “Internal Electricity Market" is key for sustainable, reliable and affordable energy.
+        </div>
+        <div class="col-lg-3 role">
+          ACER is reviewing the functioning of the real-time (intraday and balancing) electricity markets, to improve market access to renewables and help improve forecast accuracy and reduces balancing needs        </div>
+        <div class="col-lg-3 role">
+          Monitoring how markets are functioning and how national network tariffs can be structured to better suit the energy transition (e.g. incentivising grid companies to find the cheapest sources of flexibility and consumers to align their energy use with flexibility needs).        </div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Optional JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"
+    integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.0/echarts.min.js"
+    integrity="sha512-UN8wX5Zf4Af6/2UJOYTYyWLHdua4SWMd1pnIxNoDCtqdaAMk1TQdvwwgoG7ShvuOS1d9jCerLNzwfvRmL7N4iA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script src="src/app.js"></script>
+</body>
+
+</html>
