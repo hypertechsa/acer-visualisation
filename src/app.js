@@ -18,12 +18,17 @@ elChartPromise.then((res) =>{
 
     })
     elChartTwoOptions ={
-        legend: {
-            y: 'top',
-            margin: 5,
-            itemStyle:{
-                opacity: 0
+        title:{
+            text:'ID-traded volumes through \nsingle intraday coupling',
+            textStyle:{
+                fontFamily: 'Inter',
+                fontWeight: '300'
             }
+        },
+
+        legend: {
+            y: 'bottom',
+            margin: 5,
         },
         tooltip: {
             trigger: 'axis'
@@ -34,55 +39,50 @@ elChartPromise.then((res) =>{
             }
         },
         grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
+            left: 140,
+            top: 70,
+            containLabel: false
         },
-        xAxis: [
+        yAxis: [
             {
                 
                 type: 'category',
-                boundaryGap: false,
                 data: elChartTwoData[0]
             }
         ],
         
-        yAxis: [
+        xAxis: [
             {
                 type: 'value',
-                axisLabel: {
-                    formatter: "{value} %"
-                    },
+                position: 'top',
+        axisLabel: {
+        formatter: "{value} %"
+        },
+                splitLine: {
+                    lineStyle: {
+                        type: 'dashed'
+                    }
+                }
             }
         ],
         series: [
-            {
-                name: 'Total traded volume',
-                type: 'line',
-                smooth: false,
-                lineStyle: {
-                    width: 1.5,
-                    color: '#81F39C'
-                },
-                showSymbol: false,
-                emphasis: {
-                    focus: 'series'
-                },animationDelay: function (idx) {
-                    return idx * 10;
-                },
+            // {
+            //     name: 'Total traded volume',
+            //     type: 'bar',
+            //     barWidth: 8,
+            //     emphasis: {
+            //         focus: 'series'
+            //     },animationDelay: function (idx) {
+            //         return idx * 10;
+            //     },
                 
-                data: elChartTwoData[1]
-            },
+            //     data: elChartTwoData[1]
+            // },
             {
                 name: 'Cross-zonal trading',
-                type: 'line',
-                smooth: false,
-                lineStyle: {
-                    width: 1.5,
-                    color: '#81F39C'
-                },
-                showSymbol: false,
+                type: 'bar',
+                stack: 'a',
+                barWidth: 8,
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -93,17 +93,13 @@ elChartPromise.then((res) =>{
             },
             {
                 name: 'Domestic trading',
-                type: 'line',
-                smooth: false,
-                lineStyle: {
-                    width: 1.5,
-                    color: '#81F39C'
-                },
-                showSymbol: false,
+                type: 'bar',
+                stack: 'a',
+                barWidth: 8,
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
-                    return idx * 30;
+                    return idx * 300;
                 },
                 
                 data: elChartTwoData[3]
@@ -163,7 +159,6 @@ renCovidPromise.then( (results)=>{
             {
                 
                 type: 'category',
-                boundaryGap: false,
                 data: renCovidData[0]
             }
         ],
@@ -288,8 +283,7 @@ gasmarkupPromise.then(function (results) {
             }
         },
         legend: {
-            y: 'top',
-            margin: 5,
+            y: 'bottom',
         },
         tooltip: {
             trigger: 'axis',
@@ -307,13 +301,11 @@ gasmarkupPromise.then(function (results) {
         grid: {
             left: '3%',
             right: '4%',
-            bottom: '3%',
             containLabel: true
         },
         xAxis: [
             {
                 type: 'category',
-                boundaryGap: false,
                 data: gasMarkupData[0]
             }
         ],
@@ -326,11 +318,11 @@ gasmarkupPromise.then(function (results) {
             {
                 name: 'Retail Prices',
                 type: 'line',
-                smooth: true,
+                smooth: false,
                 lineStyle: {
                     width: 1
                 },
-                showSymbol: false,
+                showSymbol: true,
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -342,11 +334,11 @@ gasmarkupPromise.then(function (results) {
             {
                 name: 'Wholesail Prices',
                 type: 'line',
-                smooth: true,
+                smooth: false,
                 lineStyle: {
                     width: 1
                 },
-                showSymbol: false,
+                showSymbol: true,
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -357,11 +349,8 @@ gasmarkupPromise.then(function (results) {
             },
             {
                 name: 'Markup',
-                type: 'scatter',
-                smooth: true,
-                lineStyle: {
-                    width: 0
-                },
+                type: 'bar',
+                barWidth: 8,
                 showSymbol: false,
                 areaStyle: {
                     opacity: 0.8,
@@ -416,8 +405,7 @@ markupPromise.then(function (results) {
             }
         },
         legend: {
-            y: 'top',
-            margin: 5,
+            y: 'bottom',
         },
         tooltip: {
             trigger: 'axis',
@@ -435,13 +423,11 @@ markupPromise.then(function (results) {
         grid: {
             left: '3%',
             right: '4%',
-            bottom: '3%',
             containLabel: true
         },
         xAxis: [
             {
                 type: 'category',
-                boundaryGap: false,
                 data: markupData[0]
             }
         ],
@@ -454,11 +440,11 @@ markupPromise.then(function (results) {
             {
                 name: 'Retail Prices',
                 type: 'line',
-                smooth: true,
+                smooth: false,
                 lineStyle: {
                     width: 1
                 },
-                showSymbol: false,
+                showSymbol: true,
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -470,11 +456,11 @@ markupPromise.then(function (results) {
             {
                 name: 'Wholesail Prices',
                 type: 'line',
-                smooth: true,
+                smooth: false,
                 lineStyle: {
                     width: 1
                 },
-                showSymbol: false,
+                showSymbol: true,
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -485,11 +471,8 @@ markupPromise.then(function (results) {
             },
             {
                 name: 'Markup',
-                type: 'scatter',
-                smooth: true,
-                lineStyle: {
-                    width: 0
-                },
+                type: 'bar',
+                barWidth: 8,
                 showSymbol: false,
                 areaStyle: {
                     opacity: 0.8,
@@ -542,12 +525,16 @@ markupPromise.then(function (results) {
       })
       gasOptions = {
 
-  // title: {
-  //     text: 'Electricity production by sector (TWh)',
-  //     subtext: 'Europe, geographical boundaries'
-  // },
+  title: {
+      text: 'Evolution of capacity booked by capacity type',
+      subtext: '2016–2045 – TWh/days',
+  textStyle:{
+    fontFamily: 'Inter',
+    fontWeight: '300'
+}
+  },
   legend: {
-      y: 'top',
+      y: 'bottom',
       margin: 5,
   },
   tooltip: {
@@ -566,7 +553,7 @@ markupPromise.then(function (results) {
   grid: {
       left: '3%',
       right: '4%',
-      bottom: '3%',
+      bottom: '15%',
       containLabel: true
   },
   xAxis: [
@@ -804,7 +791,7 @@ var labelRight = {
 };
 option = {
     title: {
-        text: "Efficient use of interconnectors in the different timeframes in 2019 (%)",
+        text: "Efficient use of interconnectors \nin the different timeframes in 2019 (%)",
         textStyle:{
             fontFamily: 'Inter',
             fontWeight: '300'
@@ -836,6 +823,7 @@ option = {
     },
     grid: {
         left: 140,
+        top: 70,
         containLabel: false
     },
     yAxis: {
@@ -852,7 +840,6 @@ option = {
                 {value: 23},
             ],
             itemStyle: {
-                
                 opacity: 0.8,
                 color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
                     offset: 0,
@@ -1074,33 +1061,62 @@ gsretailOptions && gsretailChart.setOption(gsretailOptions);
 window.onresize = function() {
     gsretailChart.resize();
   };
+
+
 //choropleth
-// google.charts.load('current', {
-//     'packages':['geochart'],
-//   });
-//   google.charts.setOnLoadCallback(drawRegionsMap);
+google.charts.load('current', {
+    'packages':['geochart'],
+  });
+  google.charts.setOnLoadCallback(drawRegionsMap);
 
-//   function drawRegionsMap() {
-//     var data = google.visualization.arrayToDataTable([
-//       ['Country', 'Popularity'],
-//       ['Germany', 'Yes'],
-//       ['United States', 'No'],
-//       ['Brazil', 'No'],
-//       ['Canada', 'No'],
-//       ['France', 'Yes'],
-//       ['RU', 'No']
-//     ]);
+  function drawRegionsMap() {
+    
+    var data = new google.visualization.DataTable();
+data.addColumn('string', 'Month'); // Implicit domain label col.
+data.addColumn('number', 'Total'); // Implicit series 1 data col.
+data.addColumn({type:'string', role:'tooltip', p:{html:true}}); // annotation role col.
+data.addRows([
+    ['Austria', 872, 'Hubs: AVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Belgium', 599, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
+    ['Luxembourg', 599, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
+    ['Czech Republic', 117, 'Hubs: CZVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Germany', 3586, 'Hubs: NCG & GPL <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Denmark', 22, 'Hubs: DKVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Spain', 238, 'Hubs: PVB <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['France', 969, 'Hubs: PEGs <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Hungary', 38, 'Hubs: MGP <br> Ranking: Emerging hub <br> 2019 trade volume: 38'],
+    ['Italy', 1374, 'Hubs: PSV <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Lithuania', 3, 'Hubs: LTVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Netherlands', 38274, 'Hubs: TTF <br> Ranking: Established hub <br> 2019 trade volume: 872'],
+    ['Poland', 146, 'Hubs: PLVTP <br> Ranking: Emerging hub <br> 2019 trade volume: 872'],
+    ['Slovakia', 15, 'Hubs: SKVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['United Kingdom', 18346, 'Hubs: NBP <br> Ranking: Established hub <br> 2019 trade volume: 872'],
+    ['Portugal', 12346, 'Hubs: NBP <br> Ranking: Established hub <br> 2019 trade volume: 872'],
+    ['Ireland', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Greece', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Slovenia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Croatia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Bulgaria', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Romania', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Estonia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Latvia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Finland', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
+    ['Sweden', 12346, 'Hubs: NBP <br> Ranking: Emerging hub <br> 2019 trade volume: 872'],
+]);
+    var options = {
+        region: '150',
+        legend: 'none',
+        keepAspectRatio: false,
+        values:[0, 400, 4000, 40000],
+        colors:['#CAF1FC', '#BAD1FF', '#75A3FF', '#004FEE'],
+        tooltip: { isHtml: true },
+        datalessRegionColor: 'transparent',
+        backgroundColor: {strokeWidth: 0, stroke: 'white'}
+    };
 
-//     var options = {
-//         region: '150',
-//         colorAxis: {values:['Yes', 'No'],
-//             colors:['red', 'yellow']}
-//     };
-
-//     var chart = new google.visualization.GeoChart(document.getElementById('electricity-chart-two'));
-
-//     chart.draw(data, options);
-//   }
+    var chart = new google.visualization.GeoChart(document.getElementById('geochart-dom'));
+    chart.draw(data, options);
+  }
 
   //modal
   $('.open-toggle').on('click', function(){ $(this).find('.answer').toggle()})
@@ -1140,107 +1156,115 @@ function elementInViewport2(el) {
   });
 
 
-  //choropleth-d3
+//   //choropleth-d3
 
 
 
-  const svg =    d3.select("#bubbles")
-                .append("div")
-                .classed("svg-container", true) //container class to make it responsive
-                .append("svg")
-                //responsive SVG needs these 2 attributes and no width and height attr
-                .attr("preserveAspectRatio", "xMinYMin meet")
-                .attr("viewBox", "0 0 600 400")
-                //class to make it responsive
-                .classed("svg-content-responsive", true); 
+//   const svg =    d3.select("#bubbles")
+//                 .append("div")
+//                 .classed("svg-container", true) //container class to make it responsive
+//                 .append("svg")
+//                 //responsive SVG needs these 2 attributes and no width and height attr
+//                 .attr("preserveAspectRatio", "xMinYMin meet")
+//                 .attr("viewBox", "0 0 600 400")
+//                 //class to make it responsive
+//                 .classed("svg-content-responsive", true); 
 
-// Map and projection
-const projection = d3.geoMercator()
-    .center([2, 47])                // GPS of location to zoom on
-    .scale(1100)     
-    // This is like the zoom
+// // Map and projection
+// const projection = d3.geoMercator()
+//     .center([2, 47])                // GPS of location to zoom on
+//     .scale(1100)     
+//     // This is like the zoom
 
 
-// Create data for circles:
-const markers = [
-  {long: 9.083, lat: 42.149, group: "A", size: 34}, // corsica
-  {long: 7.26, lat: 43.71, group: "A", size: 14}, // nice
-  {long: 2.349, lat: 48.864, group: "B", size: 87}, // Paris
-  {long: -1.397, lat: 43.664, group: "B", size: 41}, // Hossegor
-  {long: 3.075, lat: 50.640, group: "C", size: 78}, // Lille
-  {long: -3.83, lat: 58, group: "C", size: 12} // Morlaix
-];
+// // Create data for circles:
+// const markers = [
+//   {long: 9.083, lat: 42.149, group: "A", size: 34}, // corsica
+//   {long: 7.26, lat: 43.71, group: "A", size: 14}, // nice
+//   {long: 2.349, lat: 48.864, group: "B", size: 87}, // Paris
+//   {long: -1.397, lat: 43.664, group: "B", size: 41}, // Hossegor
+//   {long: 3.075, lat: 50.640, group: "C", size: 78}, // Lille
+//   {long: -3.83, lat: 58, group: "C", size: 12} // Morlaix
+// ];
 
-// Load external data and boot
-d3.json("assets/EU.geojson").then( function(data){
+// // Load external data and boot
+// d3.json("assets/EU.geojson").then( function(data){
 
-    // Filter data
-    data.features = data.features
-    console.log(data.features)
-    // Create a color scale
-    const color = d3.scaleOrdinal()
-      .domain(["A", "B", "C" ])
-      .range([ "#402D54", "#D18975", "#8FD175"])
+//     // Filter data
+//     data.features = data.features
+//     console.log(data.features)
+//     // Create a color scale
+//     const color = d3.scaleOrdinal()
+//       .domain(["A", "B", "C" ])
+//       .range([ "#402D54", "#D18975", "#8FD175"])
 
-    // Add a scale for bubble size
-    const size = d3.scaleLinear()
-      .domain([1,100])  // What's in the data
-      .range([ 4, 50])  // Size in pixel
+//     // Add a scale for bubble size
+//     const size = d3.scaleLinear()
+//       .domain([1,100])  // What's in the data
+//       .range([ 4, 50])  // Size in pixel
 
-    // Draw the map
-    svg.append("g")
-        .selectAll("path")
-        .data(data.features)
-        .join("path")
-          .attr("d", d3.geoPath()
-              .projection(projection)
-          )
-        .style("stroke", "black")
-        .style("opacity", .3)
+//     // Draw the map
+//     svg.append("g")
+//         .selectAll("path")
+//         .data(data.features)
+//         .join("path")
+//           .attr("d", d3.geoPath()
+//               .projection(projection)
+//           )
+//         .style("stroke", "black")
+//         .style("opacity", .3)
 
-        //tooltip
+//         //tooltip
 
-        const Tooltip = d3.select("#bubbles")
-        .append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 1)
-        .style("background-color", "white")
-        .style("border", "solid")
-        .style("border-width", "2px")
-        .style("border-radius", "5px")
-        .style("padding", "5px")
+//         const Tooltip = d3.select("#bubbles")
+//         .append("div")
+//         .attr("class", "tooltip")
+//         .style("opacity", 1)
+//         .style("background-color", "white")
+//         .style("border", "solid")
+//         .style("border-width", "2px")
+//         .style("border-radius", "5px")
+//         .style("padding", "5px")
   
-      // Three function that change the tooltip when user hover / move / leave a cell
-      const mouseover = function(event, d) {
-        Tooltip.style("opacity", 1)
-      }
-      var mousemove = function(event, d) {
-        Tooltip
-          .html(d.name + "<br>" + "long: " + d.long + "<br>" + "lat: " + d.lat)
-          .style("left", (event.x)/2 + "px")
-          .style("top", (event.y)/2 - 30 + "px")
-      }
-      var mouseleave = function(event, d) {
-        Tooltip.style("opacity", 0)
-      }
+//       // Three function that change the tooltip when user hover / move / leave a cell
+//       const mouseover = function(event, d) {
+//         Tooltip.style("opacity", 1)
+//       }
+//       var mousemove = function(event, d) {
+//         Tooltip
+//           .html(d.name + "<br>" + "long: " + d.long + "<br>" + "lat: " + d.lat)
+//           .style("left", (event.x)/2 + "px")
+//           .style("top", (event.y)/2 - 30 + "px")
+//       }
+//       var mouseleave = function(event, d) {
+//         Tooltip.style("opacity", 0)
+//       }
   
-    // Add circles:
-    svg
-      .selectAll("myCircles")
-      .data(markers)
-      .join("circle")
-        .attr("cx", d => projection([d.long, d.lat])[0])
-        .attr("cy", d => projection([d.long, d.lat])[1])
-        .attr("r", d => size(d.size))
-        .style("fill", d => color(d.group))
-        .attr("stroke", d => color(d.group))
-        .attr("stroke-width", 3)
-        .attr("fill-opacity", .4)
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseleave", mouseleave)
-})
+//     // Add circles:
+//     svg
+//       .selectAll("myCircles")
+//       .data(markers)
+//       .join("circle")
+//         .attr("cx", d => projection([d.long, d.lat])[0])
+//         .attr("cy", d => projection([d.long, d.lat])[1])
+//         .attr("r", d => size(d.size))
+//         .style("fill", d => color(d.group))
+//         .attr("stroke", d => color(d.group))
+//         .attr("stroke-width", 3)
+//         .attr("fill-opacity", .4)
+//         .on("mouseover", mouseover)
+//         .on("mousemove", mousemove)
+//         .on("mouseleave", mouseleave)
+// })
   
+
+
+
+
+
+
+
+////
 
 
 

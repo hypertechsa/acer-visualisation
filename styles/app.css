@@ -59,7 +59,7 @@ body{
     padding: 1.2rem;
 }
 .sector-head{
-    font-weight: 300;
+    font-weight: 500;
     font-size: 2.7rem;
     padding-top: 30px;
 }
@@ -71,8 +71,8 @@ body{
     min-height: 250px;
 }
 #electricity-chart-two{
-    min-width: 800px;
-    min-height: 400px;
+    min-width: 300px;
+    min-height: 250px;
 }
 #renewable-chart{
     min-width: 300px;
@@ -80,11 +80,11 @@ body{
 }
 #retail-chart{
     min-width: 300px;
-    min-height: 100%;
+    height: 70%;
 }
 #retail-chart-gs{
     min-width: 300px;
-    min-height: 100%;
+    height: 70%;
 }
 .sector-grid-title{
     font-weight: 300;
@@ -129,11 +129,15 @@ body{
 }
 #el-markup-chart{
     min-height: 350px;
+    
 }
 #gas-markup-chart{
     min-height: 350px;
 
 }
+/* #geochart-dom{
+    height:1000px
+} */
 .hub-title{
     font-weight: 300;
     font-size: 1.4rem;
@@ -151,7 +155,7 @@ body{
 }
 .sector-sub-head{
     font-weight: 300;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     padding-top: 0;
 }
 .role:before {
@@ -174,22 +178,32 @@ body{
   .electricity-ill >svg{
     max-height: 40vh;
   }
-
+  #retail-ill{
+    max-height: 35vh;
+  }
 .last-head{
     padding-top: 0;
     margin-top: 0;
 }
 .right-img{
     max-width: 100%;
-    max-height: 100%;
+    min-height: 50vh;
     background: url('https://images.unsplash.com/photo-1452179535021-368bb0edc3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2048&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 
 }
+.retail-img{
+width: 100%;
+min-height: 50vh;
+    background: url('https://images.pexels.com/photos/6990487/pexels-photo-6990487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
 .gas-img{
     max-width: 100%;
-    max-height: 100%;
+min-height: 50vh;
     background: url('https://images.pexels.com/photos/532006/pexels-photo-532006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-size: cover;
     background-repeat: no-repeat;
@@ -219,9 +233,63 @@ body{
     font-size: 1.8rem;
     margin-top: 1vh;
 }
+.disclaimer{
+    border-top: 1px solid black;
+
+}
+.summary{
+    padding: 20px;
+}
+.summary > * {
+    margin-top: 2vh;
+}
 .role-sector{
     margin-top: 15vh;
 }
+.doc-link{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+.doc-clip{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+.doc-clip, .doc-link{
+    padding: 18px 25px 18px 25px;
+    font-size: 1.3rem;
+
+}
+.last{
+    background-color: #E8E8E8;
+    height: 40vh;
+}
+.sector-last{
+    padding-top: 5vh;
+}
+.doc-link-cont{
+    margin-top: 3vh;
+}
+.summary-retail{
+    background-color: #81F39C;
+}
+.summary-electricity{
+    background-color: #FEEA70;
+}
+.summary-gas{
+    background-color: #9BE6FD;
+}
+.summary-covid{
+    background-color: #E8E8E8;
+}
+/* #geochart-dom path{
+    stroke:1px solid black;  
+}
+#geochart-dom path:hover{
+
+} */
+
 /* media queries */
 
 @media only screen and (max-width: 600px) {
