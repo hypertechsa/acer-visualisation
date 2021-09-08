@@ -40,7 +40,7 @@ elChartPromise.then((res) =>{
         },
         grid: {
             left: 140,
-            top: 70,
+            top: 90,
             containLabel: false
         },
         yAxis: [
@@ -83,6 +83,9 @@ elChartPromise.then((res) =>{
                 type: 'bar',
                 stack: 'a',
                 barWidth: 8,
+                itemStyle:{
+                    color: '#FC8585'
+                },
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -96,6 +99,9 @@ elChartPromise.then((res) =>{
                 type: 'bar',
                 stack: 'a',
                 barWidth: 8,
+                itemStyle:{
+                    color: '#9BE6FD'
+                },
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -127,6 +133,8 @@ renCovidPromise.then( (results)=>{
         renCovidData[4].push(row.coal)
     })
     renCovidOptions = {
+        color: ['#81F39C', '#C0C0C0', '#75A3FF', '#000000'],
+
 
         legend: {
             y: 'top',
@@ -274,8 +282,10 @@ gasmarkupPromise.then(function (results) {
       gasMarkupData[3].push(row.mark_up)
     })
     gasMarkupOptions = {
+        color:['#004FEE', '#81F39C', '#FFB40E'],
+
         title: {
-            text: 'Gas',
+            text: 'Gas prices',
             subtext: '(euros/MWh)',
             textStyle:{
                 fontFamily: 'Inter',
@@ -352,16 +362,6 @@ gasmarkupPromise.then(function (results) {
                 type: 'bar',
                 barWidth: 8,
                 showSymbol: false,
-                areaStyle: {
-                    opacity: 0.8,
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'lightgray'
-                    }, {
-                        offset: 1,
-                        color: 'darkgray'
-                    }])
-                },
                 emphasis: {
                     focus: 'series'
                 },animationDelay: function (idx) {
@@ -395,9 +395,9 @@ markupPromise.then(function (results) {
     })
     elMarkupOptions = {
 
-        color: ['gray', 'rgba(12, 177, 114)', 'orange', 'rgba(3, 4, 124)', 'lightblue'],
+        color:['#004FEE', '#81F39C', '#FFB40E'],
         title: {
-            text: 'Electricity',
+            text: 'Electricity prices',
             subtext: '(euros/MWh)',
             textStyle:{
                 fontFamily: 'Inter',
@@ -524,9 +524,10 @@ markupPromise.then(function (results) {
 
       })
       gasOptions = {
+          color:['#C0C0C0',  '#3DCCAD', '#FFB40E','#003FEE', '#9BE6FD', '#FC8585', '#75A3FF'],
 
   title: {
-      text: 'Evolution of capacity booked by capacity type',
+      text: 'Evolution of capacity booked \nby capacity type',
       subtext: '2016–2045 – TWh/days',
   textStyle:{
     fontFamily: 'Inter',
@@ -552,6 +553,7 @@ markupPromise.then(function (results) {
   },
   grid: {
       left: '3%',
+      top: '20%',
       right: '4%',
       bottom: '15%',
       containLabel: true
@@ -613,7 +615,7 @@ markupPromise.then(function (results) {
                   color: 'rgba(3, 220, 200)'
               }, {
                   offset: 1,
-                  color: 'rgba(12, 177, 114)'
+                  color: '#3DCCAD'
               }])
           },
           emphasis: {
@@ -638,10 +640,10 @@ markupPromise.then(function (results) {
               opacity: 0.8,
               color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                   offset: 0,
-                  color: 'orange'
+                  color: '#FFB40E'
               }, {
                   offset: 1,
-                  color: 'rgba(220,218,218)'
+                  color: '#FFB40E'
               }])
           },
           emphasis: {
@@ -697,7 +699,7 @@ markupPromise.then(function (results) {
                   color: 'lightblue'
               }, {
                   offset: 1,
-                  color: 'rgba(0, 230, 255)'
+                  color: '#9BE6FD'
               }])
           },
           emphasis: {
@@ -724,7 +726,7 @@ markupPromise.then(function (results) {
                 color: 'red'
             }, {
                 offset: 1,
-                color: 'rgba(0, 230, 255)'
+                color:' #FC8585'
             }])
         },
         emphasis: {
@@ -748,10 +750,10 @@ markupPromise.then(function (results) {
             opacity: 0.8,
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                 offset: 0,
-                color: 'black'
+                color: '#BAD1FF'
             }, {
                 offset: 1,
-                color: 'rgba(0, 230, 255)'
+                color: '#75A3FF'
             }])
         },
         emphasis: {
@@ -823,7 +825,7 @@ option = {
     },
     grid: {
         left: 140,
-        top: 70,
+        top: 90,
         containLabel: false
     },
     yAxis: {
@@ -920,7 +922,7 @@ retailOptions = {
             type: 'bar',
             stack: 'total',
             itemStyle:{
-                color: '#C0C0C0'
+                color: '#81F39C'
             },
             label: {
                 show: true
@@ -935,7 +937,7 @@ retailOptions = {
             type: 'bar',
             stack: 'total',
             itemStyle:{
-                color: '#FC8585'
+                color: '#C0C0C0'
             },
             label: {
                 show: true
@@ -950,7 +952,7 @@ retailOptions = {
             type: 'bar',
             stack: 'total',
             itemStyle:{
-                color: '#BC9BFD'
+                color: '#75A3FF'
             },
             label: {
                 show: true
@@ -1029,7 +1031,7 @@ gsretailOptions = {
             type: 'bar',
             stack: 'total',
             itemStyle:{
-                color: '#C0C0C0'
+                color: '#81F39C'
             },
             label: {
                 show: true
@@ -1044,7 +1046,7 @@ gsretailOptions = {
             type: 'bar',
             stack: 'total',
             itemStyle:{
-                color: '#BC9BFD'
+                color: '#75A3FF'
             },
             label: {
                 show: true
@@ -1076,39 +1078,38 @@ data.addColumn('string', 'Month'); // Implicit domain label col.
 data.addColumn('number', 'Total'); // Implicit series 1 data col.
 data.addColumn({type:'string', role:'tooltip', p:{html:true}}); // annotation role col.
 data.addRows([
-    ['Austria', 872, 'Hubs: AVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Belgium', 599, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
-    ['Luxembourg', 599, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
-    ['Czech Republic', 117, 'Hubs: CZVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Germany', 3586, 'Hubs: NCG & GPL <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Denmark', 22, 'Hubs: DKVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Spain', 238, 'Hubs: PVB <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['France', 969, 'Hubs: PEGs <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Hungary', 38, 'Hubs: MGP <br> Ranking: Emerging hub <br> 2019 trade volume: 38'],
-    ['Italy', 1374, 'Hubs: PSV <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Lithuania', 3, 'Hubs: LTVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Netherlands', 38274, 'Hubs: TTF <br> Ranking: Established hub <br> 2019 trade volume: 872'],
-    ['Poland', 146, 'Hubs: PLVTP <br> Ranking: Emerging hub <br> 2019 trade volume: 872'],
-    ['Slovakia', 15, 'Hubs: SKVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['United Kingdom', 18346, 'Hubs: NBP <br> Ranking: Established hub <br> 2019 trade volume: 872'],
-    ['Portugal', 12346, 'Hubs: NBP <br> Ranking: Established hub <br> 2019 trade volume: 872'],
-    ['Ireland', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Greece', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Slovenia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Croatia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Bulgaria', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Romania', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Estonia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Latvia', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Finland', 12346, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 872'],
-    ['Sweden', 12346, 'Hubs: NBP <br> Ranking: Emerging hub <br> 2019 trade volume: 872'],
+    ['Austria', 3, 'Hubs: AVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Belgium', 3, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
+    ['Luxembourg', 3, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
+    ['Czech Republic', 3, 'Hubs: CZVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Germany', 3, 'Hubs: NCG & GPL <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
+    ['Denmark', 2, 'Hubs: DKVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 22'],
+    ['Spain', 3, 'Hubs: PVB <br> Ranking: Advanced hub <br> 2019 trade volume: 238'],
+    ['France', 3, 'Hubs: PEGs <br> Ranking: Advanced hub <br> 2019 trade volume: 969'],
+    ['Hungary', 2, 'Hubs: MGP <br> Ranking: Emerging hub <br> 2019 trade volume: 38'],
+    ['Italy', 3, 'Hubs: PSV <br> Ranking: Advanced hub <br> 2019 trade volume: 1372'],
+    ['Lithuania', 1, 'Hubs: LTVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 3'],
+    ['Netherlands', 4, "<b> Hubs: </b> TTF <br> <b>Ranking: </b>Established hub <br> <b>2019 trade volume:</b> 38,272 <br /> <br> <p class='tooltip-description'>TTF has become the global reference <br>hub  for hedging worldwide LNG supply </p>"],
+    ['Poland', 2, 'Hubs: PLVTP <br> Ranking: Emerging hub <br> 2019 trade volume: 146'],
+    ['Slovakia', 1, 'Hubs: SKVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 15'],
+    ['United Kingdom', 4, 'Hubs: NBP <br> Ranking: Established hub <br> 2019 trade volume: 18,346'],
+    ['Portugal', 1, 'Hubs: MIBGAS (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Ireland', 1, 'Hubs: IBP, NIBP (inactive) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Greece', 1, 'Hubs: Mediterranean (regional), HTP (inactive) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Slovenia', 1, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Croatia', 1, 'Hubs: SEE (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Bulgaria', 1, 'Hubs: SEE (regional), BG (planned national) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Romania', 1, 'Hubs: SEE (regional), RO (national) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Estonia', 1, 'Hubs: Baltic (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Latvia', 1, 'Hubs: Baltic (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
+    ['Sweden', 2, 'Hubs: Baltic (regional) <br> Ranking: Emerging hub <br> 2019 trade volume: N/A'],
 ]);
     var options = {
         region: '150',
         legend: 'none',
         keepAspectRatio: false,
-        values:[0, 400, 4000, 40000],
-        colors:['#CAF1FC', '#BAD1FF', '#75A3FF', '#004FEE'],
+        values:[1, 2, 3, 4],
+        colors:['#CAF1FC', '#9BE6FD', '#75A3FF', '#004FEE'],
         tooltip: { isHtml: true },
         datalessRegionColor: 'transparent',
         backgroundColor: {strokeWidth: 0, stroke: 'white'}
@@ -1150,7 +1151,7 @@ function elementInViewport2(el) {
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
     duration: 1500,
-    delay: function(el, i) { return i * 10 },
+    delay: function(el, i) { return  i * 40 },
     direction: 'alternate',
     loop: true
   });
@@ -1258,8 +1259,23 @@ function elementInViewport2(el) {
 // })
   
 
-
-
+// Light blue
+// #CAF1FC #9BE6FD
+// Yellow
+// #DBCAFC #BC9BFD
+// LightGreen
+// #FCC0C0 #FC8585
+// Purple
+// #FFD885 #FFB40E
+// Red
+// #BAD1FF #75A3FF
+// Orange
+// #9DE0D0 #3DCCAD
+// blue
+// #E8E8E8
+// #C0C0C0
+// #000000
+// Highlights - #004FEE
 
 
 

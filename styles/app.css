@@ -1,6 +1,68 @@
 html, body{
     font-family: 'Inter'!important;
+    scroll-behavior: smooth;
 }
+/* header */
+.header{
+    position: fixed;
+    top:0;
+    z-index: 4;
+    height: 60px;
+    background-color: white;
+}
+.navigation{
+    height: 60px;
+    padding-top: 10px;
+}
+.item-top{
+font-weight: 600;
+padding-right: 10px;
+font-size: 0.85rem;
+cursor: pointer;
+
+}
+.item-top:hover{
+    color: #004FEE;
+}
+.extranet-item{
+    font-weight:600;
+padding-right: 10px;
+font-size: 1.05rem;
+cursor: pointer;
+}
+.extranet-item:hover{
+    text-decoration: underline;
+}
+.right-nav{
+    font-weight: 800;
+}
+.bi-search{
+    float: right;
+}
+.item-top:first-child{
+    padding-left: 40px;
+}
+.logo{
+    background: url('http://acer.europa.eu/sites/default/files/acer_logo_mobile.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #E8E8E8; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #004FEE; 
+  }
+  /* scrollbar */
 body{
     position: relative;
 }
@@ -135,9 +197,16 @@ body{
     min-height: 350px;
 
 }
-/* #geochart-dom{
-    height:1000px
-} */
+div.google-visualization-tooltip {
+	margin: 0;
+	padding: 5px 0px 0px 5px;
+    color:#444;
+    background-color:white;
+    border: 0px;
+    border-radius:5px;
+    -webkit-box-shadow: 6px 5px 20px -5px rgba(25,25,25,0.75); 
+    box-shadow: 6px 5px 20px -5px rgba(25,25,25,0.75);
+}
 .hub-title{
     font-weight: 300;
     font-size: 1.4rem;
@@ -188,7 +257,7 @@ body{
 .right-img{
     max-width: 100%;
     min-height: 50vh;
-    background: url('https://images.unsplash.com/photo-1452179535021-368bb0edc3a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2048&q=80');
+    background: url('https://images.unsplash.com/photo-1546883648-8c5648200abc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -204,7 +273,7 @@ min-height: 50vh;
 .gas-img{
     max-width: 100%;
 min-height: 50vh;
-    background: url('https://images.pexels.com/photos/532006/pexels-photo-532006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background: url('https://images.unsplash.com/photo-1542274368-443d694d79aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -213,7 +282,9 @@ min-height: 50vh;
     content: '↓';
     margin-right: 10px;
 }
-
+.tooltip-description{
+    border-top: 1px solid #000;
+}
 .svg-container {
     display: inline-block;
     position: relative;
@@ -230,8 +301,12 @@ min-height: 50vh;
 }
 .role > h1{
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-top: 1vh;
+}
+.info{
+    color: #004FEE;
+    cursor: pointer;
 }
 .disclaimer{
     border-top: 1px solid black;
@@ -283,13 +358,56 @@ min-height: 50vh;
 .summary-covid{
     background-color: #E8E8E8;
 }
-/* #geochart-dom path{
-    stroke:1px solid black;  
+.margin-x-large{
+    margin-top: 20vh;
 }
-#geochart-dom path:hover{
+.margin-large{
+    margin-top: 15vh;
+}
+.margin-medium{
+    margin-top: 10vh;
+}
+.margin-small{
+    margin-top: 5vh;
+}
+.geolegend{
+    margin-bottom: 10px;
+}
+.established, .advanced, .iliquid, .emerging{
+    font-size: 0.8rem;
+}
+.established::before{
+    content: '';
+    margin-left: 10px;
 
-} */
+    margin-right: 2px;
+    padding: 0px 8px 0px 8px;
+    background-color: #004FEE;
+}
+.advanced::before{
+    content: '';
+    margin-right: 2px;
+    margin-left: 10px;
 
+    padding: 0px 8px 0px 8px;
+    background-color: #75A3FF;
+}
+.emerging::before{
+    content: '';
+    margin-right: 2px;
+    margin-left: 10px;
+
+    padding: 0px 8px 0px 8px;
+    background-color: #9BE6FD;
+}
+.iliquid::before{
+    content: '';
+    margin-right: 2px;
+    margin-left: 10px;
+
+    padding: 0px 8px 0px 8px;
+    background-color: #CAF1FC;
+}
 /* media queries */
 
 @media only screen and (max-width: 600px) {
@@ -304,4 +422,13 @@ min-height: 50vh;
     }.answer{
         max-width: 100%;
     }
+
+  }
+  @media only screen and (max-width: 1200px) {
+    .logo{
+        height: 30px;
+    }
+  .items, .right-nav{
+    display: none;
+}
   }
