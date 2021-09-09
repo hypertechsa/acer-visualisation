@@ -47,6 +47,15 @@ cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
 }
+.logo-footer{
+    background: url('http://acer.europa.eu/sites/default/files/styles/max_325x325/public/images/footer/acer_logo_footer_0.png?itok=X3k5pp9v');
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 10vh;
+}
+.footer-column{
+    margin-top: 5vh;
+}
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -89,6 +98,31 @@ body{
 .landing-left-panel{
     background-color: #FEEA70;
     bottom: 0;
+}
+.sm-icon-footer{
+    height: 54px;
+    width: 54px;
+    cursor: pointer;
+    margin: 1px;
+    border: 1px solid #004fee!important;
+    color: #004fee!important;
+    background-color: transparent!important;
+}
+.sm-icon-footer:hover{
+    background-color: #004fee!important; 
+    color: white!important;
+
+}
+.subscribe{
+    padding: 20px 30px 20px 30px!important;
+    background-color: #004fee!important; 
+    border-radius: 0px!important;
+}
+.subscription{
+    border-right: 1px solid #000;
+}
+.sub-content{
+    padding-left: 50px!important;
 }
 .sm-icon{
     height: 54px;
@@ -143,11 +177,11 @@ body{
 }
 #retail-chart{
     min-width: 300px;
-    height: 70%;
+    min-height: 70vh;
 }
 #retail-chart-gs{
     min-width: 300px;
-    height: 70%;
+    min-height: 70vh;
 }
 .sector-grid-title{
     font-weight: 300;
@@ -391,7 +425,17 @@ min-height: 50vh;
 
 .last{
     background-color: #E8E8E8;
-    height: 40vh;
+    height: auto;
+    padding-bottom: 2vh;
+}
+.copy{
+    height: 50px;
+    background-color: #004FEE;
+    color: white;
+    font-size: 13px;
+}
+.copy p {
+    padding-top: 15px
 }
 .sector-last{
     padding-top: 5vh;
@@ -457,7 +501,6 @@ min-height: 50vh;
     content: '';
     margin-right: 2px;
     margin-left: 10px;
-
     padding: 0px 8px 0px 8px;
     background-color: #CAF1FC;
 }
@@ -475,12 +518,24 @@ min-height: 50vh;
     }.answer{
         max-width: 100%;
     }
-
+    .sub-content{
+        padding-left: 10px!important;
+    }
+    .copy{
+        height: 80px;
+    }
   }
   @media only screen and (max-width: 1200px) {
     .logo{
         height: 30px;
     }
+    .disclaimer:last-child{
+        border: none;
+    }
+    .subscription{
+        border: none;
+    }
+
   .items, .right-nav{
     display: none;
 }
