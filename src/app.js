@@ -1078,31 +1078,31 @@ data.addColumn('string', 'Month'); // Implicit domain label col.
 data.addColumn('number', 'Total'); // Implicit series 1 data col.
 data.addColumn({type:'string', role:'tooltip', p:{html:true}}); // annotation role col.
 data.addRows([
-    ['Austria', 3, 'Hubs: AVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Belgium', 3, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
-    ['Luxembourg', 3, 'Hubs: ZEE+ZTP <br> Ranking: Advanced hub <br> 2019 trade volume: 599'],
-    ['Czech Republic', 3, 'Hubs: CZVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Germany', 3, 'Hubs: NCG & GPL <br> Ranking: Advanced hub <br> 2019 trade volume: 872'],
-    ['Denmark', 2, 'Hubs: DKVTP <br> Ranking: Advanced hub <br> 2019 trade volume: 22'],
-    ['Spain', 3, 'Hubs: PVB <br> Ranking: Advanced hub <br> 2019 trade volume: 238'],
-    ['France', 3, 'Hubs: PEGs <br> Ranking: Advanced hub <br> 2019 trade volume: 969'],
-    ['Hungary', 2, 'Hubs: MGP <br> Ranking: Emerging hub <br> 2019 trade volume: 38'],
-    ['Italy', 3, 'Hubs: PSV <br> Ranking: Advanced hub <br> 2019 trade volume: 1372'],
-    ['Lithuania', 1, 'Hubs: LTVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 3'],
-    ['Netherlands', 4, "<b> Hubs: </b> TTF <br> <b>Ranking: </b>Established hub <br> <b>2019 trade volume:</b> 38,272 <br /> <br> <p class='tooltip-description'>TTF has become the global reference <br>hub  for hedging worldwide LNG supply </p>"],
-    ['Poland', 2, 'Hubs: PLVTP <br> Ranking: Emerging hub <br> 2019 trade volume: 146'],
-    ['Slovakia', 1, 'Hubs: SKVTP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: 15'],
-    ['United Kingdom', 4, 'Hubs: NBP <br> Ranking: Established hub <br> 2019 trade volume: 18,346'],
-    ['Portugal', 1, 'Hubs: MIBGAS (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Ireland', 1, 'Hubs: IBP, NIBP (inactive) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Greece', 1, 'Hubs: Mediterranean (regional), HTP (inactive) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Slovenia', 1, 'Hubs: NBP <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Croatia', 1, 'Hubs: SEE (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Bulgaria', 1, 'Hubs: SEE (regional), BG (planned national) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Romania', 1, 'Hubs: SEE (regional), RO (national) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Estonia', 1, 'Hubs: Baltic (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Latvia', 1, 'Hubs: Baltic (regional) <br> Ranking: Iliquid-incipient hub <br> 2019 trade volume: N/A'],
-    ['Sweden', 2, 'Hubs: Baltic (regional) <br> Ranking: Emerging hub <br> 2019 trade volume: N/A'],
+    ['Austria', 3, '<b> Hubs: </b> AVTP <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 872'],
+    ['Belgium', 3, '<b> Hubs: </b> ZEE+ZTP <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 599'],
+    ['Luxembourg', 3, '<b> Hubs: </b> ZEE+ZTP <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 599'],
+    ['Czech Republic', 3, '<b> Hubs: </b> CZVTP <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 872'],
+    ['Germany', 3, '<b> Hubs: </b> NCG, GPL <br> <b>Ranking: </b>Advanced hub <br> <b>2019 combined trade volume:</b> 3,586'],
+    ['Denmark', 2, '<b> Hubs: </b> DKVTP <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 22'],
+    ['Spain', 3, '<b> Hubs: </b> PVB <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 238'],
+    ['France', 3, '<b> Hubs: </b> PEGs <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 969'],
+    ['Hungary', 2, '<b> Hubs: </b> MGP <br> <b>Ranking: </b>Emerging hub <br> <b>2019 trade volume:</b> 38'],
+    ['Italy', 3, '<b> Hubs: </b> PSV <br> <b>Ranking: </b>Advanced hub <br> <b>2019 trade volume:</b> 1,372'],
+    ['Lithuania', 1, '<b> Hubs: </b> LTVTP <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> 3'],
+    ['Netherlands', 4, "<b> <b> Hubs: </b> </b> TTF <br> <b>Ranking:</b>Established hub <br> <b>2019 trade volume:</b> 38,272"],
+    ['Poland', 2, '<b> Hubs: </b> PLVTP <br> <b>Ranking: </b>Emerging hub <br> <b>2019 trade volume:</b> 146'],
+    ['Slovakia', 1, '<b> Hubs: </b> SKVTP <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> 15'],
+    ['United Kingdom', 4, '<b> Hubs: </b> NBP <br> <b>Ranking: </b>Established hub <br> <b>2019 trade volume:</b> 18,346'],
+    ['Portugal', 1, '<b> Hubs: </b> MIBGAS (regional) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Ireland', 1, '<b> Hubs: </b> IBP, NIBP (inactive) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Greece', 1, '<b> Hubs: </b> Mediterranean (regional), HTP (inactive) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Slovenia', 1, '<b> Hubs: </b> NBP <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Croatia', 1, '<b> Hubs: </b> SEE (regional) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Bulgaria', 1, '<b> Hubs: </b> SEE (regional), BG (planned national) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Romania', 1, '<b> Hubs: </b> SEE (regional), RO (national) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Estonia', 1, '<b> Hubs: </b> Baltic (regional) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Latvia', 1, '<b> Hubs: </b> Baltic (regional) <br> <b>Ranking: </b>Iliquid-incipient hub <br> <b>2019 trade volume:</b> N/A'],
+    ['Sweden', 2, '<b> Hubs: </b> Baltic (regional) <br> <b>Ranking: </b>Emerging hub <br> <b>2019 trade volume:</b> N/A'],
 ]);
     var options = {
         region: '150',
@@ -1121,33 +1121,23 @@ data.addRows([
 
   //modal
   $('.open-toggle').on('click', function(){ $(this).find('.answer').toggle()})
+  $('.hover-toggle').on('click', function(e){
+  $(this).find('.hover-answer').toggle();})
   //
 //viewport checker
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
 
-function elementInViewport2(el) {
-    var top = el.offsetTop;
-    var left = el.offsetLeft;
-    var width = el.offsetWidth;
-    var height = el.offsetHeight;
-  
-    while(el.offsetParent) {
-      el = el.offsetParent;
-      top += el.offsetTop;
-      left += el.offsetLeft;
-    }
-  
-    return (
-      top < (window.pageYOffset + window.innerHeight) &&
-      left < (window.pageXOffset + window.innerWidth) &&
-      (top + height) > window.pageYOffset &&
-      (left + width) > window.pageXOffset
-    );
-  }
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
   
   //anime-strokes
-  let trigger = $('#electricity-ill-one')
     let svgAnimation = anime({
-    targets: '.cls-1',
+    targets: ['.cls-1','.cls-3'],
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
     duration: 1500,
@@ -1155,6 +1145,8 @@ function elementInViewport2(el) {
     direction: 'alternate',
     loop: true
   });
+
+// ($('.sector-child').isInViewport())? svgAnimation.restart(): null;
 
 
 //   //choropleth-d3

@@ -75,7 +75,8 @@ body{
     padding: 10px 40px 40px 40px;
 }
 .suptitle{
-    margin: 10px 0 10px 0 ;
+    margin: 10px 0 0px 0 ;
+    font-weight: 300;
 }
 .hero-text{
     font-weight: 300;
@@ -152,15 +153,45 @@ body{
     font-weight: 300;
     font-size: 1.8rem;
 }
-
+.hub-titles{
+    margin-bottom: 2vh;
+}
+.hover-answer{
+    display: none;
+    position: fixed;
+    min-height: 30%;
+    background-color: #E8E8E8;
+    border: 1px solid #004FEE;
+    font-size: 0.8rem;
+    font-weight: 300;
+    min-width: 40%;
+    max-width: 60%;
+    z-index: 100;
+    padding: 30px;
+}
+.hover-answer::after{
+    min-width: 10%;
+    max-width: 100%;
+    position: absolute;
+    bottom:0;
+    margin-bottom: -20px;
+    left: 0;
+    content: 'click anywhere on the box to close';
+    padding: 10px;
+    color: white;
+    font-weight: 300;
+    background-color: #004FEE;
+}
 .answer{
     display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     min-height: 30%;
-    background-color: #FEEA70;
+    background-color: #E8E8E8;
+    border: 1px solid #004FEE;
     font-size: 0.8rem;
+    font-weight: 300;
     min-width: 40%;
     max-width: 60%;
     z-index: 100;
@@ -171,7 +202,7 @@ body{
     max-width: 60%;
     position: absolute;
     top:0;
-    margin-top: -10px;
+    margin-top: -20px;
     left: 0;
     content: 'click anywhere on the box to close';
     padding: 10px;
@@ -209,7 +240,7 @@ div.google-visualization-tooltip {
 }
 .hub-title{
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 .hub > ul > li{
     font-size: 0.9rem;
@@ -254,6 +285,9 @@ div.google-visualization-tooltip {
     padding-top: 0;
     margin-top: 0;
 }
+.doc-link{
+    color: #004FEE;
+}
 .right-img{
     max-width: 100%;
     min-height: 50vh;
@@ -261,6 +295,36 @@ div.google-visualization-tooltip {
     background-size: cover;
     background-repeat: no-repeat;
 
+}
+.abax-ill >svg{
+    padding: 4rem;
+}
+.sector-box-last{
+    background-color: #E8E8E8;
+    padding-left: 30px
+}
+.table td{
+    border-top: 1px solid black!important;
+}
+td{
+    border: 1px solid black;
+}
+.last-title{
+    margin-top: 4vh;
+}
+td:nth-child(even){
+    border-right: 0px;
+}
+td:nth-child(odd){
+    border-left: 0px;
+}
+.foreword-img{
+    width: 100%;
+    min-height: 50vh;
+        background: url('https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 }
 .retail-img{
 width: 100%;
@@ -312,6 +376,9 @@ min-height: 50vh;
     border-top: 1px solid black;
 
 }
+.disclaimer:first-child{
+    margin-top: 5vh;
+}
 .summary{
     padding: 20px;
 }
@@ -321,21 +388,7 @@ min-height: 50vh;
 .role-sector{
     margin-top: 15vh;
 }
-.doc-link{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-}
-.doc-clip{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
 
-}
-.doc-clip, .doc-link{
-    padding: 18px 25px 18px 25px;
-    font-size: 1.3rem;
-
-}
 .last{
     background-color: #E8E8E8;
     height: 40vh;
