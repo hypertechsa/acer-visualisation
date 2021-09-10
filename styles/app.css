@@ -226,8 +226,8 @@ body{
     border: 1px solid #004FEE;
     font-size: 0.8rem;
     font-weight: 300;
-    min-width: 40%;
-    max-width: 60%;
+    min-width: 30%;
+    max-width: 40%;
     z-index: 100;
     padding: 30px;
 }
@@ -287,8 +287,21 @@ div.google-visualization-tooltip {
 .hub:hover{
     border-left: 4px solid blue;
 }
+.electricity-highlight{
+    background-color: #FEEA70;
+}
+.gas-highlight{
+    background-color: #9BE6FD;
+}
+.retail-highlight{
+    background-color: #81F39C;
+}
+.general-highlight{
+    background-color: #004FEE;
+    color: white;
+}
 .sector-sub-head{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.8rem;
     padding-top: 0;
 }
