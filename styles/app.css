@@ -10,6 +10,9 @@ html, body{
     height: 60px;
     background-color: white;
 }
+.bi-list{
+    display: none;
+}
 .navigation{
     height: 60px;
     padding-top: 10px;
@@ -547,7 +550,13 @@ min-height: 60vh;
         border: none;
     }
 
-  .items, .right-nav{
+  .items, .bi-search, .extranet-item{
     display: none;
+}
+.bi-list{
+    display: block;
+    font-size: 1.6rem;
+    margin-left: auto;
+    margin-top: -45px;
 }
   }
