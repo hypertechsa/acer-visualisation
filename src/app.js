@@ -319,6 +319,7 @@ gasmarkupPromise.then(function (results) {
         grid: {
             left: '3%',
             right: '4%',
+            bottom: '9%',
             containLabel: true
         },
         xAxis: [
@@ -431,6 +432,8 @@ markupPromise.then(function (results) {
         grid: {
             left: '3%',
             right: '4%',
+            bottom: '9%',
+
             containLabel: true
         },
         xAxis: [
