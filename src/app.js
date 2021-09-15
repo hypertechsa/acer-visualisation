@@ -134,10 +134,17 @@ renCovidPromise.then( (results)=>{
     })
     renCovidOptions = {
         color: ['#81F39C', '#C0C0C0', '#75A3FF', '#000000'],
-
+        title: {
+            text: 'Evolution of generation mix in the EU',
+            subtext: '(% share of generation)',
+            textStyle:{
+                fontFamily: 'Inter',
+                fontWeight: '300'
+            }
+        },
 
         legend: {
-            y: 'top',
+            y: 'bottom',
             margin: 5,
             itemStyle:{
                 opacity: 0
@@ -158,9 +165,10 @@ renCovidPromise.then( (results)=>{
             }
         },
         grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
+            left: '0%',
+            right: '0%',
+            bottom: '7%',
+            top: '18%',
             containLabel: true
         },
         xAxis: [
