@@ -346,24 +346,28 @@ div.google-visualization-tooltip {
 .abax-ill >svg{
     padding: 4rem;
 }
+.headtable th{
+        background-color: #E8E8E8;
+        border-top: 1px solid black!important;
+        border-bottom: 1px solid black!important;
+        font-weight: 500;
+
+
+}
+.general-icon{
+background: url('http://acer.europa.eu/themes/custom/acer/img/box-General.svg');
+background-repeat: no-repeat;
+background-position: center;
+
+}
 .sector-box-last{
-    background-color: #E8E8E8;
     padding-left: 30px
 }
-.table td{
-    border-top: 1px solid black!important;
-}
-td{
+.table{
     border: 1px solid black;
 }
 .last-title{
     margin-top: 4vh;
-}
-td:nth-child(even){
-    border-right: 0px;
-}
-td:nth-child(odd){
-    border-left: 0px;
 }
 .foreword-img{
     width: 100%;
