@@ -167,7 +167,7 @@ renCovidPromise.then( (results)=>{
         grid: {
             left: '0%',
             right: '0%',
-            bottom: '7%',
+            bottom: '10%',
             top: '18%',
             containLabel: true
         },
@@ -1118,7 +1118,9 @@ data.addRows([
     var options = {
         region: '150',
         legend: 'none',
-        keepAspectRatio: false,
+        keepAspectRatio: true,
+        width: '100%',
+        magnifyingGlass: {enable: true, zoomFactor: 6.5},
         values:[1, 2, 3, 4],
         colors:['#CAF1FC', '#9BE6FD', '#75A3FF', '#004FEE'],
         tooltip: { isHtml: true },
@@ -1129,6 +1131,20 @@ data.addRows([
     var chart = new google.visualization.GeoChart(document.getElementById('geochart-dom'));
     chart.draw(data, options);
   }
+  //map-resize-options
+  //create trigger to resizeEnd event     
+// $(window).resize(function() {
+//     if(this.resizeTO) clearTimeout(this.resizeTO);
+//     this.resizeTO = setTimeout(function() {
+//         $(this).trigger('resizeEnd');
+//     }, 500);
+// });
+
+// //redraw graph when window resize is completed  
+// $(window).on('resizeEnd', function() {
+    
+// });
+//
 
   //modal
   $('.open-toggle').on('click', function(){ $(this).find('.answer').toggle()})

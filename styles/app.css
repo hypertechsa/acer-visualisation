@@ -13,6 +13,21 @@ html, body{
 .bi-list{
     display: none;
 }
+#cta{
+    padding: 30px 30px 20px 30px;
+    background: #004FEE;
+    bottom: 0;
+    min-width: 30%;
+    margin-top: 0;
+    float: right;
+    margin-left: 0px!important;
+}
+#cta h6 a{
+    color: white;
+}
+#cta h6 a:hover{
+    text-decoration: none;
+}
 .navigation{
     height: 60px;
     padding-top: 10px;
@@ -84,7 +99,7 @@ body{
 .hero-left{
     margin-top: 5vh;
     /* border-top: 1px solid black; */
-    padding: 10px 40px 40px 40px;
+    padding: 10px 40px 5px 40px;
 }
 .suptitle{
     margin: 10px 0 0px 0 ;
@@ -101,6 +116,7 @@ body{
 .landing-left-panel{
     background-color: #FEEA70;
     bottom: 0;
+    padding-right: 0px!important;
 }
 .sm-icon-footer{
     height: 54px;
@@ -143,10 +159,11 @@ body{
     background-repeat: no-repeat;
 }
 .land, .landing{
-    min-height: 100vh;
+    min-height: calc(100vh - 15px);
 }
 .landing{
-    min-height: 100vh;
+    min-height: calc(100vh - 15px);
+
     max-width: 1920px;
 }
 
@@ -277,6 +294,13 @@ div.google-visualization-tooltip {
     font-weight: 300;
     font-size: 1rem;
 }
+/* #geochart-dom{
+    min-height: 80vh;
+}
+#geochart-dom > svg{
+    height: 100%;
+    width: 100%;
+} */
 .hub > ul > li{
     font-size: 0.9rem;
 }
