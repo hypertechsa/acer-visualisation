@@ -294,13 +294,10 @@ div.google-visualization-tooltip {
     font-weight: 300;
     font-size: 1rem;
 }
-/* #geochart-dom{
-    min-height: 80vh;
+.cta-discover::after{
+    content: '↓';
+    margin-left: 10px;
 }
-#geochart-dom > svg{
-    height: 100%;
-    width: 100%;
-} */
 .hub > ul > li{
     font-size: 0.9rem;
 }

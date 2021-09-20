@@ -781,6 +781,11 @@ markupPromise.then(function (results) {
 gasOptions && gasChart.setOption(gasOptions);
 window.onresize = function() {
 gasChart.resize();
+elMarkupChart.resize()
+gasMarkupChart.resize()
+renCovidChart.resize()
+elChartTwo.resize()
+myChart.resize()
 };
 });
 function papaPromise(url) {
@@ -1127,24 +1132,10 @@ data.addRows([
         datalessRegionColor: 'transparent',
         backgroundColor: {strokeWidth: 0, stroke: 'white'}
     };
-
     var chart = new google.visualization.GeoChart(document.getElementById('geochart-dom'));
     chart.draw(data, options);
-  }
-  //map-resize-options
-  //create trigger to resizeEnd event     
-// $(window).resize(function() {
-//     if(this.resizeTO) clearTimeout(this.resizeTO);
-//     this.resizeTO = setTimeout(function() {
-//         $(this).trigger('resizeEnd');
-//     }, 500);
-// });
 
-// //redraw graph when window resize is completed  
-// $(window).on('resizeEnd', function() {
-    
-// });
-//
+  }
 
   //modal
   $('.open-toggle').on('click', function(){ $(this).find('.answer').toggle()})
